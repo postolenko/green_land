@@ -7,6 +7,10 @@ $(document).ready(function() {
 
     // ----------------------------
 
+    var headerSite = $(".header-site");
+
+    // ----------------------------
+
     var imgWrapp;
 
     // ----------------------------
@@ -16,6 +20,8 @@ $(document).ready(function() {
     getCenterBlockPositon();
 
     getAricleBgSize();
+
+    getHeaderPosition();
 
     $(window).resize(function() {
 
@@ -28,6 +34,14 @@ $(document).ready(function() {
         getCenterBlockPositon();
 
         getAricleBgSize();
+
+        getHeaderPosition();
+
+    });
+
+    $(document).scroll(function() {
+
+        getHeaderPosition();
 
     });
 
@@ -58,6 +72,26 @@ $(document).ready(function() {
             $("#" + videoIdAttr)[0].src += "?rel=0&autoplay=1";            
 
         });
+
+    });
+
+    $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+
+        delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
+
+        if (delta >= 0) {
+
+           headerSite.css({
+                "top" :  0 + "%"
+            });
+
+        } else {            
+
+             headerSite.css({
+                "top" : -110 + "%"
+            });
+
+        }
 
     });
 
@@ -116,6 +150,23 @@ $(document).ready(function() {
             });
 
         }
+
+    }
+
+    function getHeaderPosition() {
+
+        var firstSectionCorrd = $("#promo").offset().top + $("#promo").height();
+
+        if( $(window).scrollTop() >= firstSectionCorrd ) {
+
+            headerSite.addClass("fixed");
+
+        } else {
+
+            headerSite.removeClass("fixed");
+
+        }
+
 
     }
 
