@@ -417,10 +417,6 @@ a:active {
 
 /*-- Slick Slider --*/
 
-.slick-dots {
-
-}
-
 .slick-dots li {
     display: inline-block;
     vertical-align: top;
@@ -546,7 +542,6 @@ a:active {
 }
 
 /*-- /Slick Slider --*/
-
 
 /*-------------------------------------------*/
 /* ----- HEADER ------ */
