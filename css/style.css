@@ -653,11 +653,7 @@ a.logo.active {
 }
 
 a.logo:hover {
-    -webkit-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    -moz-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    -ms-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    -o-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
+
 }
 
 .main-nav-block {
@@ -729,7 +725,7 @@ a.transparent-pill {
     padding: 8px 2% 9px 2%;
     text-align: center;
     border: 2px solid rgba(255, 255, 255, 1);
-    background: rgba(255, 255, 255, 0);
+    background: rgba(51, 51, 51, 0);
     font-family: "Lato", Verdana, Arial, sans-serif;
     font-size: 14px;
     line-height: 30px;
@@ -741,46 +737,46 @@ a.transparent-pill {
     -o-border-radius: 25px;
     border-radius: 25px;
 
-    -webkit-transition-property: background, color;
+    -webkit-transition-property: background, border, color;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
 
-    -moz-transition-property: background, color;
+    -moz-transition-property: background, border, color;
     -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
 
-    -ms-transition-property: background, color;
+    -ms-transition-property: background, border, color;
     -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
 
-    -o-transition-property: background, color;
+    -o-transition-property: background, border, color;
     -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
 
-    transition-property: background, color;
+    transition-property: background, border, color;
     transition-duration: .3s;
     transition-timing-function: ease;
 }
 
 a.transparent-pill:link,
 a.transparent-pill:visited {
-    background: rgba(255, 255, 255, 0);
-    color: #ffffff;
+    background: rgba(51, 51, 51, 0);
+    border: 2px solid rgba(255, 255, 255, 1);
 }
 
 a.transparent-pill:active{
-    background: rgba(255, 255, 255, 1);
-    color: #24b186;
+    background: rgba(51, 51, 51, 1);
+    border: 2px solid rgba(51, 51, 51, 1);
 }
 
 a.transparent-pill.active {
-    background: rgba(255, 255, 255, 1);
-    color: #24b186;
+    background: rgba(51, 51, 51, 1);
+    border: 2px solid rgba(51, 51, 51, 1);
 }
 
 a.transparent-pill:hover {
-    background: rgba(255, 255, 255, 1);
-    color: #24b186;
+    background: rgba(51, 51, 51, 1);
+    border: 2px solid rgba(51, 51, 51, 1);
 }
 
 .header-site.fixed {
@@ -828,38 +824,6 @@ a.transparent-pill:hover {
     color: #333333;
 }
 
-/*.header-site.fixed a.logo:link,
-.header-site.fixed a.logo:visited {
-    color: #333333;
-}*/
-/*
-.header-site.fixed a.logo:active{
-    color: #24b186;
-    -webkit-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    -moz-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    -ms-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    -o-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-}
-
-.header-site.fixed a.logo.active {
-    color: #24b186;
-    -webkit-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    -moz-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    -ms-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    -o-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-}
-
-.header-site.fixed a.logo:hover {
-    color: #24b186;
-    -webkit-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    -moz-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    -ms-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    -o-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-    text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-}*/
-
 .header-site.fixed .main-nav li a {
     color: #555555;
     border-bottom: 2px solid rgba(255, 255, 255, 0);
@@ -883,29 +847,33 @@ a.transparent-pill:hover {
 }
 
 .header-site.fixed a.transparent-pill {
-    border: 2px solid #24b186;
-    background: rgb(255, 255, 255);
-    color: #ffffff;
-}
-
-.header-site.fixed a.transparent-pill:link,
-.header-site.fixed a.transparent-pill:visited {
+    border: 2px solid rgb(36, 177, 134);
     background: rgb(255, 255, 255);
     color: #555555;
 }
 
-.header-site.fixed a.transparent-pill:active{
-    background: rgb(36, 177, 134);
+.header-site.fixed  a.transparent-pill:link,
+.header-site.fixed  a.transparent-pill:visited {
+    background: rgba(51, 51, 51, 0);
+    border: 2px solid rgb(36, 177, 134);
+    color: #555555;
+}
+
+.header-site.fixed  a.transparent-pill:active{
+    background: rgb(51, 51, 51);
+    border: 2px solid rgb(51, 51, 51);
     color: #ffffff;
 }
 
-.header-site.fixed a.transparent-pill.active {
-    background: rgb(36, 177, 134);
+.header-site.fixed  a.transparent-pill.active {
+    background: rgb(51, 51, 51);
+    border: 2px solid rgb(51, 51, 51);
     color: #ffffff;
 }
 
-.header-site.fixed a.transparent-pill:hover {
-    background: rgb(36, 177, 134);
+.header-site.fixed  a.transparent-pill:hover {
+    background: rgb(51, 51, 51);
+    border: 2px solid rgb(51, 51, 51);
     color: #ffffff;
 }
 
@@ -922,17 +890,12 @@ a.transparent-pill:hover {
     /*display: block;*/
     width: 50px;
     height: 50px;
-    background: rgba(36, 177, 134, 1);
     text-align: right;
     position: relative;
     z-index: 8;
     position: fixed;
     top: 15px;
     right: 2%;
-}
-
-.header-site.active .respmenubtn-box {
-    background: rgba(255, 255, 255, 1);
 }
 
 .respmenubtn {
@@ -950,7 +913,7 @@ a.transparent-pill:hover {
     display: block;
     width: 26px;
     height: 2px;
-    background: rgb(255, 255, 255);
+    background: rgb(51, 51, 51);
     margin: 0 auto 7px auto;
 
     -webkit-transition-property: transform, border, background;
@@ -984,7 +947,7 @@ a.transparent-pill:hover {
 }
 
 .respmenubtn:hover span {
-    background: rgb(255, 255, 255);
+    background: rgb(51, 51, 51);
 }
 
 .respmenubtn.active span {
@@ -992,7 +955,7 @@ a.transparent-pill:hover {
     width: 35px;
     top: 1px;
     left: 0px;
-    background: rgb(255, 255, 255);
+    background: rgb(51, 51, 51);
 }
 
 .respmenubtn.active span:last-child {
@@ -1107,6 +1070,9 @@ a.transparent-pill:hover {
     line-height: 23px;
     font-weight: 600;
     color: #ffffff;
+    -webkit-box-shadow: 0 0 4px 0 rgba(51, 51, 51, .9);
+    -moz-box-shadow: 0 0 4px 0 rgba(51, 51, 51, .9);
+    box-shadow: 0 0 4px 0 rgba(51, 51, 51, .9);
     text-transform: uppercase;
     -webkit-border-radius: 32px;
     -moz-border-radius: 32px;
@@ -1114,50 +1080,47 @@ a.transparent-pill:hover {
     -o-border-radius: 32px;
     border-radius: 32px;
 
-    -webkit-transition-property: background, color, border;
+    -webkit-transition-property: background, border;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
 
-    -moz-transition-property: background, color, border;
+    -moz-transition-property: background, border;
     -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
 
-    -ms-transition-property: background, color, border;
+    -ms-transition-property: background, border;
     -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
 
-    -o-transition-property: background, color, border;
+    -o-transition-property: background, border;
     -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
 
-    transition-property: background, color, border;
+    transition-property: background, border;
     transition-duration: .3s;
     transition-timing-function: ease;
 }
 
 .grey-pill:link,
 .grey-pill:visited {
+    color: #ffffff;
     border: 1px solid #333333;
     background: rgba(51, 51, 51, 1);
-    color: #ffffff;
 }
 
 .grey-pill:active{
-    border: 1px solid #ffffff;
-    background: rgba(255, 255, 255, 1);
-    color: #24b186;
+    border: 1px solid #cb2a2a;
+    background: rgb(203, 42, 42);
 }
 
 .grey-pill.active {
-    border: 1px solid #ffffff;
-    background: rgba(255, 255, 255, 1);
-    color: #24b186;
+    border: 1px solid #cb2a2a;
+    background: rgb(203, 42, 42);
 }
 
 .grey-pill:hover {
-    border: 1px solid #ffffff;
-    background: rgba(255, 255, 255, 1);
-    color: #24b186;
+    border: 1px solid #cb2a2a;
+    background: rgb(203, 42, 42);
 }
 
 .form-block {
@@ -1238,7 +1201,7 @@ a.green-pill {
     cursor: pointer;
     text-align: center;
     border: 1px solid #24b186;
-    background: rgba(36, 177, 134, 1);
+    background: rgb(36, 177, 134);
     font-family: "Lato", Verdana, Arial, sans-serif;
     font-size: 14px;
     line-height: 23px;
@@ -1251,48 +1214,58 @@ a.green-pill {
     -o-border-radius: 32px;
     border-radius: 32px;
 
-    -webkit-transition-property: box-shadow;
+    -webkit-transition-property: background, border;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
 
-    -moz-transition-property: box-shadow;
+    -moz-transition-property: background, border;
     -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
 
-    -ms-transition-property: box-shadow;
+    -ms-transition-property: background, border;
     -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
 
-    -o-transition-property: box-shadow;
+    -o-transition-property: background, border;
     -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
 
-    transition-property: box-shadow;
+    transition-property: background, border;
     transition-duration: .3s;
     transition-timing-function: ease;
 }
 
 .green-pill:link,
 .green-pill:visited {
-    box-shadow: none;
+    border: 1px solid #24b186;
+    background: rgb(36, 177, 134);
 }
 
-.green-pill:active{
-    -webkit-box-shadow: 0px 5px 5px 5px rgba(36,177,134,0.3);
-    -moz-box-shadow: 0px 5px 5px 5px rgba(36,177,134,0.3);
-    box-shadow: 0px 5px 5px 5px rgba(36,177,134,0.3);
+.green-pill:active {
+    border: 1px solid #333333;
+    background: rgb(51, 51, 51);
 }
 
 .green-pill.active {
-    -webkit-box-shadow: 0px 5px 5px 5px rgba(36,177,134,0.3);
-    -moz-box-shadow: 0px 5px 5px 5px rgba(36,177,134,0.3);
-    box-shadow: 0px 5px 5px 5px rgba(36,177,134,0.3);
+    border: 1px solid #333333;
+    background: rgb(51, 51, 51);
 }
 
 .green-pill:hover {
-    -webkit-box-shadow: 0px 5px 5px 5px rgba(36,177,134,0.3);
-    -moz-box-shadow: 0px 5px 5px 5px rgba(36,177,134,0.3);
-    box-shadow: 0px 5px 5px 5px rgba(36,177,134,0.3);
+    border: 1px solid #333333;
+    background: rgb(51, 51, 51);
+}
+
+.green-pill.lower:active {
+    text-transform: none;
+}
+
+.green-pill.lower.active {
+    text-transform: none;
+}
+
+.green-pill.lower:hover {
+    text-transform: none;
 }
 
 
@@ -1932,22 +1905,44 @@ a.green-pill {
 }
 
 .team-thumbnails .thumbnail .inner {
-    display: block;
     width: 100%;
     height: 440px;
+    overflow: hidden;
     cursor: pointer;
     position: relative;
 }
 
-.team-thumbnails .thumbnail .inner:before {
+.team-thumbnails .thumbnail .img-box {
+    width: 100%;
+    height: 366px;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-thumbnails .thumbnail .img-box img {
     display: block;
+    min-width: 100%;
+    min-height: 100%;
+    border: none;
+    position: relative;
+    top: 50%;
+    left: 50%;    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.team-thumbnails .thumbnail .inner:before {
     content: "";
     width: 100%;
-    height: 100%;
+    height: 366px;
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
+    z-index: 2;
     background: rgba(36, 177, 134, .52);
 
     -webkit-transition-property: opacity;
@@ -1975,48 +1970,35 @@ a.green-pill {
     opacity: 1;
 }
 
-.team-thumbnails .thumbnail .img-box {
-    width: 100%;
-    height: 365px;
-    overflow: hidden;
-}
-
-.team-thumbnails .thumbnail .img-box img {
-    display: block;
-    min-width: 100%;
-    min-height: 100%;
-    border: none;
-}
-
 .team-thumbnails .thumbnail .descript {
     display: block;
     width: 100%;
+    height: auto;
     position: absolute;
-    top: 366px;
-    bottom: auto;
+    bottom: -11%;
     left: 0;
     z-index: 2;
     background: rgb(255, 255, 255);
     padding: 23px 0 18px 0;
 
     -webkit-transition-property: top, bottom;
-    -webkit-transition-duration: .3s;
+    -webkit-transition-duration: .4s;
     -webkit-transition-timing-function: ease;
 
     -moz-transition-property: top, bottom;
-    -moz-transition-duration: .3s;
+    -moz-transition-duration: .4s;
     -moz-transition-timing-function: ease;
 
     -ms-transition-property: top, bottom;
-    -ms-transition-duration: .3s;
+    -ms-transition-duration: .4s;
     -ms-transition-timing-function: ease;
 
     -o-transition-property: top, bottom;
-    -o-transition-duration: .3s;
+    -o-transition-duration: .4s;
     -o-transition-timing-function: ease;
 
     transition-property: top, bottom;
-    transition-duration: .3s;
+    transition-duration: .4s;
     transition-timing-function: ease;
 }
 
@@ -2285,7 +2267,6 @@ a.green-pill {
     display: table;
     height: 100%;
     width: 100%;
-    cursor: pointer;
     position: absolute;
     top: 0;
     left: 0;
@@ -2314,25 +2295,50 @@ a.green-pill {
     width: 102px;
     height: 102px;
     margin: 0 auto;
-    cursor: pointer;    
+    cursor: pointer;
+    position: relative;
     border: 1px solid #ffffff;
-    background: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    background-image: url(../img/play_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: 41px center;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
+
+    -webkit-transition-property: transform, background-color, border;
+    -webkit-transition-duration: .5s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: transform, background-color, border;
+    -moz-transition-duration: .5s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: transform, background-color, border;
+    -ms-transition-duration: .5s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: transform, background-color, border;
+    -o-transition-duration: .5s;
+    -o-transition-timing-function: ease;
+
+    transition-property: transform, background-color, border;
+    transition-duration: .5s;
+    transition-timing-function: ease;
 }
 
-.play_icon {
-    display: inline-block;
-    vertical-align: top;
-    width: 22px;
-    height: 37px;
-    background-image: url(../img/play_icon.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
+.play-btn:hover {
+    border: 1px solid #333333;
+    background-image: url(../img/play_icon_hover.png);
+    background-color: rgb(51, 51, 51);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .play-block p {
@@ -2616,6 +2622,55 @@ a.green-pill {
     line-height: 23px;
     font-weight: bold;
     color: #ffffff;
+
+    -webkit-transition-property: background, border;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: background, border;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: background, border;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: background, border;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: background, border;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.green-pill.white-hover:link,
+.green-pill.white-hover:visited {
+    border: 1px solid #24b186;
+    background: rgb(36, 177, 134);
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.green-pill.white-hover:active {
+    border: 1px solid #ffffff;
+    background: rgb(255, 255, 255);
+    text-transform: none;
+    color: #333333;
+}
+
+.green-pill.white-hover.active {
+    border: 1px solid #ffffff;
+    background: rgb(255, 255, 255);
+    text-transform: none;
+    color: #333333;
+}
+
+.green-pill.white-hover:hover {
+    border: 1px solid #ffffff;
+    background: rgb(255, 255, 255);
+    text-transform: none;
+    color: #333333;
 }
 
 /*-- /Section 9 --*/
@@ -2774,17 +2829,13 @@ p.copyright {
     background: rgb(255, 255, 255);
 }
 
-.send-unput-block .send-btn.green-pill {
+.send-unput-block .send-btn {
     width: 131px;
     margin: 0;
     padding: 9px 2% 10px 2%;
-    border: 1px solid #24b186;
-    background: rgba(36, 177, 134, 1);
     position: absolute;
     top: 0;
     right: 0;
-    color: #ffffff;
-    box-shadow: none;
     -webkit-border-radius: 22px;
     -moz-border-radius: 22px;
     -ms-border-radius: 22px;
