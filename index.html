@@ -23,11 +23,9 @@
 	<script type="text/javascript" src="vendors/js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script>new WOW().init();</script>
-<!-- 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
 	
-	<title>Green Land</title>
-	
+	<title>Green Land</title>	
 
 </head>
 
@@ -43,26 +41,29 @@
 			
 			<div class="row clearfix">
 				
-				<div class="col col-1 left">
-					<a href="#" class="logo">GreenLand</a>
+				<div class="col col-1 left logo-block">
+					<a href="#promo" class="logo">GreenLand</a>
 				</div>
 
 				<div class="col col-2 left">
 					<div class="main-nav-block scroll">
-						<ul class="main-nav">
-							<li><a href="#">Services</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Pricing</a></li>
-							<li><a href="#">Testimonials</a></li>
-							<li><a href="#">Gallery</a></li>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Video</a></li>
-							<li><a href="#">Blog</a></li>
+						<ul class="main-nav" id="top-menu">
+							<li><a href="#services">Services</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#pricing">Pricing</a></li>
+							<li><a href="#testimonials">Testimonials</a></li>
+							<li><a href="#gallery">Gallery</a></li>
+							<li><a href="#team">Team</a></li>
+							<li><a href="#video">Video</a></li>
+							<li><a href="#blog">Blog</a></li>
 						</ul>
+
+						<div class="append-elem bottom-row" data-append-elem = "1" ></div>
+
 					</div>
 				</div>
 
-				<div class="col col-3 left">
+				<div class="col col-3 left desktop-position append-elem"  data-append-descktop-elem = "1" data-min-screen = "768">
 
 					<a href="#" class="transparent-pill">Get in Touch</a>
 
@@ -96,14 +97,14 @@
 					<div class="row center">
 
 						<div class="two-cols-block offset-ziro">
-							<div class="col col-1">
+							<div class="col col-1 wow fadeInLeft">
 								<div class="promo-article">
 									<h1>Specials Ideas for more People</h1>
 									<p>Pleasing youthful stimulates money-back genuine proven multi-purpose style crystals. Treat lasting don't. One new drink soaking our.</p>
 									<a href="#" class="grey-pill">Details</a>
 								</div>
 							</div>
-							<div class="col col-2">
+							<div class="col col-2 wow fadeInRight">
 								<div class="form-block">
 									<h4>Do you have a question?</h4>
 									<p>More squeezable cholesterol reduced fresh yours extra classic save silky chosen cholesterol. Choice reduced seasoned.</p>
@@ -136,7 +137,7 @@
 
 				<!-- Section 2 -->
 
-				<section class="section-2">
+				<section class="section-2" id="services">
 						
 					<div class="row">
 
@@ -148,7 +149,7 @@
 
 							<div class="thumbnail">
 								<div class="inner">
-									<div class="col col-1">
+									<div class="col col-1 wow zoomIn animation-delay">
 										<div class="icon-box">
 											<img src="img/icon_01.png" alt="">
 										</div>
@@ -162,7 +163,7 @@
 
 							<div class="thumbnail">
 								<div class="inner">
-									<div class="col col-1">
+									<div class="col col-1 wow zoomIn animation-delay">
 										<div class="icon-box">
 											<img src="img/icon_02.png" alt="">
 										</div>
@@ -176,7 +177,7 @@
 
 							<div class="thumbnail">
 								<div class="inner">
-									<div class="col col-1">
+									<div class="col col-1 wow zoomIn animation-delay">
 										<div class="icon-box">
 											<img src="img/icon_03.png" alt="">
 										</div>
@@ -190,7 +191,7 @@
 
 							<div class="thumbnail">
 								<div class="inner">
-									<div class="col col-1">
+									<div class="col col-1 wow zoomIn animation-delay">
 										<div class="icon-box">
 											<img src="img/icon_04.png" alt="">
 										</div>
@@ -204,7 +205,7 @@
 
 							<div class="thumbnail">
 								<div class="inner">
-									<div class="col col-1">
+									<div class="col col-1 wow zoomIn animation-delay">
 										<div class="icon-box">
 											<img src="img/icon_05.png" alt="">
 										</div>
@@ -218,7 +219,7 @@
 
 							<div class="thumbnail">
 								<div class="inner">
-									<div class="col col-1">
+									<div class="col col-1 wow zoomIn animation-delay">
 										<div class="icon-box">
 											<img src="img/icon_06.png" alt="">
 										</div>
@@ -240,7 +241,7 @@
 
 				<!-- Section 3 -->
 
-				<section class="section-3">
+				<section class="section-3" id="about">
 
 					<div class="two-cols-article">
 
@@ -252,7 +253,7 @@
 
 						<div class="row clearfix">
 
-							<div class="article-block right">
+							<div class="article-block right wow fadeInRight animation-delay">
 									
 								<h2>About GreenLand</h2>
 
@@ -276,7 +277,7 @@
 
 				<!-- Section 4 -->
 
-				<section class="section-4">
+				<section class="section-4" id="pricing">
 
 					<div class="row">
 
@@ -284,7 +285,7 @@
 
 						<p>Spend real fights effective anything extra by leading. Mouthwatering leading how real formula also locked-in have can mountain thought</p>
 
-						<div class="price-thumbnails offset-ziro">
+						<div class="price-thumbnails offset-ziro wow fadeInUp animation-delay">
 
 							<div class="price-thumbnail">
 								<div class="inner">
@@ -407,7 +408,7 @@
 
 				<!-- Section 5 -->
 
-				<section class="section-5">
+				<section class="section-5" id="testimonials">
 
 					<div class="row">
 
@@ -425,9 +426,9 @@
 
 						</div>
 
-						<div class="testimonila-slider-block">							
+						<div class="testimonila-slider-block">
 
-							<div class="testimonila-slider">
+							<div class="testimonila-slider wow fadeIn animation-delay">
 
 								<div class="slide">
 									<div class="inner">
@@ -543,7 +544,7 @@
 
 				<!-- Section 6 -->
 
-				<section class="section-6">
+				<section class="section-6" id="gallery">
 
 					<div class="row">
 
@@ -561,7 +562,7 @@
 
 					</div>
 
-					<div class="gallery clearfix">
+					<div class="gallery clearfix wow fadeIn animation-delay">
 						
 						<div class="col">
 							
@@ -634,7 +635,7 @@
 
 				<!-- Section 7 -->
 
-				<section class="section-7">
+				<section class="section-7" id="team">
 
 					<div class="row">
 
@@ -642,10 +643,10 @@
 
 						<p>Spend real fights effective anything extra by leading. Mouthwatering leading how real formula also locked-in have can mountain thought</p>
 
-						<div class="team-thumbnails offset-ziro">
+						<div class="team-thumbnails offset-ziro wow fadeInUp animation-delay">
 							
 							<div class="thumbnail">
-								<div href="#" class="inner">
+								<div class="inner">
 
 									<div class="img-box">
 										<img src="img/img_07.jpg" alt="" />
@@ -665,7 +666,7 @@
 							</div>
 
 							<div class="thumbnail">
-								<div href="#" class="inner">
+								<div class="inner">
 									<div class="img-box">
 										<img src="img/img_08.jpg" alt="" />
 									</div>
@@ -684,7 +685,7 @@
 							</div>
 
 							<div class="thumbnail">
-								<div href="#" class="inner">
+								<div class="inner">
 									<div class="img-box">
 										<img src="img/img_09.jpg" alt="" />
 									</div>
@@ -711,12 +712,12 @@
 
 				<!-- Section 8 -->
 
-				<section class="section-8">
+				<section class="section-8" id="video">
 
 					<div class="video-wrapp">
 
 						<div class="video-block">
-							<iframe width="" height="" src="https://www.youtube.com/embed/Bp3lxx7kkPs" frameborder="0" allowfullscreen></iframe>
+							<iframe src="https://www.youtube.com/embed/Bp3lxx7kkPs" frameborder="0" allowfullscreen></iframe>
 							<div class="video-mask">
 								<div class="play-block">
 									<button type="button" class="play-btn">
@@ -729,13 +730,13 @@
 
 					</div>
 
-					<div class="row">						
+					<div class="row" id="blog">
 
 						<h2>Blog Posts</h2>
 
 						<p>Spend real fights effective anything extra by leading. Mouthwatering leading how real formula also locked-in have can mountain thought</p>
 
-						<div class="blog-thumbnails offset-ziro">
+						<div class="blog-thumbnails offset-ziro wow fadeInUp animation-delay">
 
 							<div class="blog-thumbnail">
 								<a href="#" class="inner">
@@ -824,7 +825,7 @@
 
 						<p>Spend real fights effective anything extra by leading. Mouthwatering leading how real formula also locked-in have can mountain thought</p>
 
-						<div class="contacts-form-block">
+						<div class="contacts-form-block wow fadeIn animation-delay">
 							<form>
 
 								<div class="two-cols clearfix">
@@ -868,7 +869,11 @@
 					
 					<div class="col col-1 left">
 
-						<a href="#" class="grey-logo">GreenLand</a>
+						<div class="logo-block">
+
+							<a href="#" class="grey-logo">GreenLand</a>
+
+						</div>
 
 						<p class="copyright">&copy; 2017 GreenLand.All rights reserved</p>
 
@@ -884,7 +889,7 @@
 					<div class="col col-2 left">
 						<p>523 Sylvan Ave, 5th Floor<br /> Mountain View, CA 94041USA</p>
 						<p><a href="tel:+123456789">+1 (234) 56789</a>, <a href="tel:+19876543210">+1 987 654 3210</a></p>
-						<p><a class="mail-link" href="mailto:support@watchland.com" class="mail-link">support@watchland.com</a></p>
+						<p><a href="mailto:support@watchland.com" class="mail-link">support@watchland.com</a></p>
 					</div>
 
 					<div class="col col-3 left">
@@ -903,7 +908,7 @@
 							<form>
 								<div class="send-unput-block">
 									<input type="name" placeholder="E-mail" name="" />
-									<button type="submit" class="send-btn green-pill" />Send</button>
+									<button type="submit" class="send-btn green-pill">Send</button>
 								</div>
 								<p class="important">Mouthwatering leading how real formula also locked-in have can mountain thought.</p>
 							</form>

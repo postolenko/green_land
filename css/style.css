@@ -193,10 +193,10 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity .3s e
 }
 
 .animation-delay {
-    -webkit-animation-delay: .3s;
-    -moz-animation-delay: .3s;
-    -o-animation-delay: .3s;
-    animation-delay: .3s;
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -o-animation-delay: .2s;
+    animation-delay: .2s;
 }
 
 /*-------------------------------------------*/
@@ -877,19 +877,19 @@ a.transparent-pill:hover {
 
 .header-site.fixed .main-nav li a:link,
 .header-site.fixed .main-nav li a:visited {
-    border-bottom: 2px solid rgba(36, 177, 134, 0);
+    border-bottom: 2px solid rgba(85, 85, 85, 0);
 }
 
 .header-site.fixed .main-nav li a:active{
-    border-bottom: 2px solid rgba(36, 177, 134, 1);
+    border-bottom: 2px solid rgba(85, 85, 85, 1);
 }
 
 .header-site.fixed .main-nav li a.active {
-    border-bottom: 2px solid rgba(36, 177, 134, 1);
+    border-bottom: 2px solid rgba(85, 85, 85, 1);
 }
 
 .header-site.fixed .main-nav li a:hover {
-    border-bottom: 2px solid rgba(36, 177, 134, 1);
+    border-bottom: 2px solid rgba(85, 85, 85, 1);
 }
 
 .header-site.fixed a.transparent-pill {
@@ -941,6 +941,10 @@ a.transparent-pill:hover {
     right: 2%;
 }
 
+.header-site.active .respmenubtn-box {
+    background: rgba(255, 255, 255, 1);
+}
+
 .respmenubtn {
     display: block;
     width: 35px;
@@ -954,8 +958,8 @@ a.transparent-pill:hover {
 
 .respmenubtn span {
     display: block;
-    width: 27px;
-    height: 3px;
+    width: 26px;
+    height: 2px;
     background: rgb(255, 255, 255);
     margin: 0 auto 7px auto;
 
@@ -1010,9 +1014,8 @@ a.transparent-pill:hover {
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    margin: 3px 0 0 0;
     position: relative;
-    top: 4px;
+    top: 10px;
     left: 1px;
 }
 
@@ -1021,6 +1024,10 @@ a.transparent-pill:hover {
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
+}
+
+.header-site.active .respmenubtn-box span {
+    background: rgb(51, 51, 51);
 }
 
 /* ----- / Responsive Menu Button ------ */

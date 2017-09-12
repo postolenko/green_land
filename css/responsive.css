@@ -96,6 +96,7 @@
 	.header-site {
 	   z-index: 7;
 	   padding: 0;
+	   min-height: 52px;
 	}
 
 	.header-site .col {
@@ -104,6 +105,12 @@
 
 	.header-site .col-1 {
 	    width: 35%;
+		position: relative;
+		z-index: 7;
+	}
+
+	.header-site.fixed .col-1 {
+	    padding-top: 19px;
 	}
 
 	.header-site .col-2 {
@@ -122,14 +129,19 @@
 	    line-height: 27px;
 	}
 
+	.header-site.active a.logo {
+		color: #555555;
+	}
+
 	.main-nav-block {
 		display: none;
 		width: 100%;
 		height: 100vh;
 		z-index: 6;
 		margin: 0;
-		padding: 60px 0 10px 0;
-		background: rgba(36, 177, 134, .9);
+		text-align: center;
+		padding: 126px 0 10px 0;
+		background: rgb(255, 255, 255);
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -144,63 +156,35 @@
 		display: block;
 		width: 100%;
 		padding: 0;
+		line-height: 20px;
+		text-align: center;
 	}
 
-	.main-nav li a,
-	.fixed .main-nav li a {
-		display: block;
-		font-size: 23px;
-		line-height: 23px;
-		color: #ffffff;
-		text-align: center;
-		padding: 7px 1%;
-		background: rgba(255, 255, 255, 0);
-		border-bottom: none !important;
-	    -webkit-transition-property: background, color;
-	    -webkit-transition-duration: .3s;
-	    -webkit-transition-timing-function: ease;
-
-	    -moz-transition-property: background, color;
-	    -moz-transition-duration: .3s;
-	    -moz-transition-timing-function: ease;
-
-	    -ms-transition-property: background, color;
-	    -ms-transition-duration: .3s;
-	    -ms-transition-timing-function: ease;
-
-	    -o-transition-property: background, color;
-	    -o-transition-duration: .3s;
-	    -o-transition-timing-function: ease;
-
-	    transition-property: background, color;
-	    transition-duration: .3s;
-	    transition-timing-function: ease;
+	.main-nav li a {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 17px;
+		line-height: 17px;
+		color: #555555;
+		padding: 0 0 2px 0;
+		border-bottom: 2px solid transparent;
 	}
 
 	.main-nav li a:link,
-	.main-nav li a:visited,
-	.fixed .main-nav li a:link,
-	.fixed .main-nav li a:visited {
-		color: #ffffff;
-		background: rgba(255, 255, 255, 0);
+	.main-nav li a:visited {
+		border-bottom: 2px solid transparent;
 	}
 
-	.main-nav li a:active,
-	.fixed .main-nav li a:active {
-		color: #24b186;
-		background: rgba(255, 255, 255, 1);
+	.main-nav li a:active {
+		border-bottom: 2px solid #555555;
 	}
 
-	.main-nav li a.active,
-	.fixed .main-nav li a.active {
-		color: #24b186;
-		background: rgba(255, 255, 255, 1);
+	.main-nav li a.active {
+		border-bottom: 2px solid #555555;
 	}
 
-	.main-nav li a:hover,
-	.fixed .main-nav li a:hover {
-		color: #24b186;
-	    background: rgba(255, 255, 255, 1);
+	.main-nav li a:hover {
+	    border-bottom: 2px solid #555555;
 	}
 
 	.respmenubtn-box {
@@ -324,7 +308,7 @@
 
 	section {
 	    position: relative;
-	    padding: 50px 0;
+	    padding: 26px 0;
 	}
 
 	h1 {
@@ -344,15 +328,24 @@
 
 	/*-- Header --*/
 
-	.header-site .col-1 {
-	    width: 35%;
+	.header-site .col-1,
+	.header-site.fixed .col-1 {
+	    width: 65%;
+	    padding-top: 8px;
 	}
 
 	.header-site .col-3,
 	.header-site.fixed .col-3 {
-	    width: 65%;
-	    padding-top: 9px;
-	    padding-right: 80px;
+	    width: 0;
+	    padding: 0;
+	}
+
+	.header-site .bottom-row {
+		padding: 20px 0;
+	}
+
+	.respmenubtn-box {
+	    top: 1px;
 	}
 
 	/*-- /Header --*/
@@ -458,6 +451,10 @@
 
 	/*-- Section 8 --*/
 
+	.section-8:before {
+	    height: 88%;
+	}
+
 	.video-wrapp {
 		width: 772px;
 	    height: 472px;
@@ -551,24 +548,7 @@
 
 	.header-site .col-1,
 	.header-site.fixed .col-1 {
-	    width: 40%;
-	    padding-top: 19px;
-	}
-
-	.header-site .col-3,
-	.header-site.fixed .col-3 {
-	    width: 60%;
-	    padding-top: 9px;
-	    padding-right: 65px;
-	}
-
-	a.transparent-pill {
-		min-width: auto;
-	    padding: 5px 9% 6px 9%;
-	}
-
-	.respmenubtn-box {
-	    top: 10px;
+	    padding-top: 7px;
 	}
 
 	/*-- /Header --*/
@@ -646,7 +626,7 @@
 	/*-- Section 9 --*/
 
 	.section-9 {
-	    padding: 54px 0 30px 0;
+	    padding: 34px 0 20px 0;
 	}
 
 	.contacts-form-block .two-cols .col {
@@ -682,8 +662,8 @@
 	/*-- Header --*/
 
 	a.logo {
-	    font-size: 22px;
-	    line-height: 22px;
+		font-size: 25px;
+		line-height: 25px;
 	}
 
 	/*-- /Header --*/
