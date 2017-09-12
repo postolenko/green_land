@@ -80,8 +80,7 @@ $(document).ready(function() {
 
         // -----------------
 
-       var fromTop = $(this).scrollTop()+topMenuHeight;
-       
+       var fromTop = $(this).scrollTop()+topMenuHeight;       
 
        var cur = scrollItems.map(function(){
          if ($(this).offset().top < fromTop)
@@ -115,6 +114,7 @@ $(document).ready(function() {
       }, 800);
       e.preventDefault();
     });
+
 
     $(function() {
 

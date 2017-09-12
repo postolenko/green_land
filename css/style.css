@@ -162,9 +162,18 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+input {
+    -webkit-appearance: none;
+}
+
+button {
+    -webkit-appearance: none;
+}
+
 textarea {
     resize: none;
     overflow: auto;
+    -webkit-appearance: none;
 }
 
 input::-webkit-input-placeholder       {opacity: 1; transition: opacity .3s ease;}
@@ -606,51 +615,38 @@ a.logo {
     line-height: 35px;
     font-weight: 800;
     color: #ffffff;
-    text-shadow: 0 4px 3px rgba(255, 255, 255, 0);
-    -webkit-transition-property: text-shadow, color;
+    -webkit-transition-property: color;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
 
-    -moz-transition-property: text-shadow, color;
+    -moz-transition-property: color;
     -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
 
-    -ms-transition-property: text-shadow, color;
+    -ms-transition-property: color;
     -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
 
-    -o-transition-property: text-shadow, color;
+    -o-transition-property: color;
     -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
 
-    transition-property: text-shadow, color;
+    transition-property: color;
     transition-duration: .3s;
     transition-timing-function: ease;
 }
 
 a.logo:link,
 a.logo:visited {
-    -webkit-text-shadow: 0 4px 3px rgba(255, 255, 255, 0);
-    -moz-text-shadow: 0 4px 3px rgba(255, 255, 255, 0);
-    -ms-text-shadow: 0 4px 3px rgba(255, 255, 255, 0);
-    -o-text-shadow: 0 4px 3px rgba(255, 255, 255, 0);
-    text-shadow: 0 4px 3px rgba(255, 255, 255, 0);
+
 }
 
 a.logo:active{
-    -webkit-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    -moz-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    -ms-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    -o-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
+
 }
 
 a.logo.active {
-    -webkit-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    -moz-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    -ms-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    -o-text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
-    text-shadow: 0 4px 3px rgba(255, 255, 255, .45);
+
 }
 
 a.logo:hover {
@@ -827,22 +823,13 @@ a.transparent-pill:hover {
 
 .header-site.fixed a.logo {
     color: #333333;
-    -webkit-text-shadow: 0px 2px 3px rgba(36, 177, 134, 0);
-    -moz-text-shadow: 0px 2px 3px rgba(36, 177, 134, 0);
-    -ms-text-shadow: 0px 2px 3px rgba(36, 177, 134, 0);
-    -o-text-shadow: 0px 2px 3px rgba(36, 177, 134, 0);
-    text-shadow: 0px 2px 3px rgba(36, 177, 134, 0);
 }
 
-.header-site.fixed a.logo:link,
+/*.header-site.fixed a.logo:link,
 .header-site.fixed a.logo:visited {
-    -webkit-text-shadow: 0px 2px 3px rgba(36, 177, 134, 0);
-    -moz-text-shadow: 0px 2px 3px rgba(36, 177, 134, 0);
-    -ms-text-shadow: 0px 2px 3px rgba(36, 177, 134, 0);
-    -o-text-shadow: 0px 2px 3px rgba(36, 177, 134, 0);
-    text-shadow: 0px 2px 3px rgba(36, 177, 134, 0);
-}
-
+    color: #333333;
+}*/
+/*
 .header-site.fixed a.logo:active{
     color: #24b186;
     -webkit-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
@@ -868,7 +855,7 @@ a.transparent-pill:hover {
     -ms-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
     -o-text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
     text-shadow: 0px 2px 3px rgba(36, 177, 134, .45);
-}
+}*/
 
 .header-site.fixed .main-nav li a {
     color: #555555;
@@ -877,19 +864,19 @@ a.transparent-pill:hover {
 
 .header-site.fixed .main-nav li a:link,
 .header-site.fixed .main-nav li a:visited {
-    border-bottom: 2px solid rgba(85, 85, 85, 0);
+    border-bottom: 2px solid rgba(36, 177, 134, 0);
 }
 
 .header-site.fixed .main-nav li a:active{
-    border-bottom: 2px solid rgba(85, 85, 85, 1);
+    border-bottom: 2px solid rgba(36, 177, 134, 1);
 }
 
 .header-site.fixed .main-nav li a.active {
-    border-bottom: 2px solid rgba(85, 85, 85, 1);
+    border-bottom: 2px solid rgba(36, 177, 134, 1);
 }
 
 .header-site.fixed .main-nav li a:hover {
-    border-bottom: 2px solid rgba(85, 85, 85, 1);
+    border-bottom: 2px solid rgba(36, 177, 134, 1);
 }
 
 .header-site.fixed a.transparent-pill {
@@ -2385,23 +2372,23 @@ a.green-pill {
     min-height: 100%;
 
     -webkit-transition-property: transform;
-    -webkit-transition-duration: 1.6s;
+    -webkit-transition-duration: .5s;
     -webkit-transition-timing-function: ease;
 
     -moz-transition-property: transform;
-    -moz-transition-duration: 1.6s;
+    -moz-transition-duration: .5s;
     -moz-transition-timing-function: ease;
 
     -ms-transition-property: transform;
-    -ms-transition-duration: 1.6s;
+    -ms-transition-duration: .5s;
     -ms-transition-timing-function: ease;
 
     -o-transition-property: transform;
-    -o-transition-duration: 1.6s;
+    -o-transition-duration: .5s;
     -o-transition-timing-function: ease;
 
     transition-property: transform;
-    transition-duration: 1.6s;
+    transition-duration: .5s;
     transition-timing-function: ease;
 }
 

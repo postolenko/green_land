@@ -167,24 +167,24 @@
 		line-height: 17px;
 		color: #555555;
 		padding: 0 0 2px 0;
-		border-bottom: 2px solid transparent;
+		border-bottom: 2px solid transparent !important;
 	}
 
 	.main-nav li a:link,
 	.main-nav li a:visited {
-		border-bottom: 2px solid transparent;
+		border-bottom: 2px solid transparent !important;
 	}
 
 	.main-nav li a:active {
-		border-bottom: 2px solid #555555;
+		border-bottom: 2px solid #555555 !important;
 	}
 
 	.main-nav li a.active {
-		border-bottom: 2px solid #555555;
+		border-bottom: 2px solid #555555 !important;
 	}
 
 	.main-nav li a:hover {
-	    border-bottom: 2px solid #555555;
+	    border-bottom: 2px solid #555555 !important;
 	}
 
 	.respmenubtn-box {
@@ -371,7 +371,7 @@
 
 	.form-block {
 	    max-width: 100%;
-	    padding: 18px 2% 16px 2%;
+	    padding: 18px 6% 16px 6%;
 	}
 
 	/*-- /Section 1 --*/
@@ -392,8 +392,26 @@
 
 	/*-- Section 3 --*/
 
+	.back-bg {
+		position: relative;
+	}
+
 	.back-bg .img-box {
+		position: relative;
 		width: 100% !important;
+		height: 240px;
+
+	}
+
+	.back-bg .img-box img {
+		position: relative;
+	    top: 50%;
+	    left: 50%;
+	    -webkit-transform: translate(-50%, -50%);
+	    -moz-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	    -o-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
 	}
 
 	.article-block {
