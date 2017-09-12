@@ -164,16 +164,19 @@ input[type="number"] {
 
 input {
     -webkit-appearance: none;
+    -moz-appearance
 }
 
 button {
     -webkit-appearance: none;
+    -moz-appearance
 }
 
 textarea {
     resize: none;
     overflow: auto;
     -webkit-appearance: none;
+    -moz-appearance;
 }
 
 input::-webkit-input-placeholder       {opacity: 1; transition: opacity .3s ease;}
