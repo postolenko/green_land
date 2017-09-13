@@ -41,6 +41,11 @@ $(document).ready(function() {
 
     // -----------------------------
 
+    var lastScrollTop = 0;
+    var st = $(window).scrollTop();
+
+    // -----------------------------
+
     getFooterPosition();
 
     getCenterBlockPositon();
@@ -77,102 +82,9 @@ $(document).ready(function() {
 
     });
 
-
-    // $(document).scroll(function() {
-
     window.onscroll = function(event) {
 
         getHeaderPosition();
-
-        // -----------------
-
-        // firstSectionCorrd = $("#promo").offset().top + $("#promo").height();
-
-        // if( $(window).scrollTop() < firstSectionCorrd ) {
-
-        //     headerSite.css({
-        //         "top" :  0 + "%"
-        //     });
-
-        // }
-
-        // delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
-
-        // firstSectionCorrd = $("#promo").offset().top + $("#promo").height();
-
-        // if( $(window).scrollTop() >= firstSectionCorrd ) {
-
-        //     if (delta >= 0) {
-
-        //         headerSite.css({
-        //             "top" :  0 + "%"
-        //         });
-
-        //     } else {
-
-        //         headerSite.css({
-        //             "top" : -110 + "%"
-        //         });
-
-        //     }
-
-        // } else {
-
-        //     headerSite.css({
-        //         "top" :  0 + "%"
-        //     });
-
-        // }
-
-        
-
-        firstSectionCorrd = $("#promo").offset().top + $("#promo").height();
-
-        if( $(window).scrollTop() >= firstSectionCorrd ) {
-
-            var dimensionFlag;
-
-            var pageY = window.pageYOffset || document.documentElement.scrollTop;
-            var innerHeight = document.documentElement.clientHeight;
-
-            switch (dimensionFlag) {
-                case '':
-                  if (pageY > innerHeight) {
-                    dimensionFlag = 'up';
-                     headerSite.css({
-                        "top" : -110 + "%"
-                    });
-                  }
-                  break;
-
-                case 'up':
-                  if (pageY < innerHeight) {
-                    dimensionFlag = '';
-                    headerSite.css({
-                        "top" :  0 + "%"
-                    });
-                  }
-                  break;
-
-                case 'down':
-                  if (pageY > innerHeight) {
-                    dimensionFlag = 'up';
-
-                    headerSite.css({
-                        "top" : -110 + "%"
-                    });
-
-                  }
-                break;
-            }
-
-        } else {
-
-            headerSite.css({
-                "top" :  0 + "%"
-            });
-
-        }
 
         // -----------------
 
@@ -199,18 +111,20 @@ $(document).ready(function() {
 
        }
 
-    // });
-
     }
+    
 
+    $(function() {
 
-    menuItems.click(function(e){
-      var href = $(this).attr("href"),
-          offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-      $('html, body').stop().animate({ 
-          scrollTop: offsetTop
-      }, 800);
-      e.preventDefault();
+        menuItems.click(function(e){
+          var href = $(this).attr("href"),
+              offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+          $('html, body').stop().animate({ 
+              scrollTop: offsetTop
+          }, 800);
+          e.preventDefault();
+        });
+
     });
 
 
@@ -235,38 +149,6 @@ $(document).ready(function() {
         });
 
     });
-
-    // $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
-
-    //     delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
-
-    //     firstSectionCorrd = $("#promo").offset().top + $("#promo").height();
-
-    //     if( $(window).scrollTop() >= firstSectionCorrd ) {
-
-    //         if (delta >= 0) {
-
-    //             headerSite.css({
-    //                 "top" :  0 + "%"
-    //             });
-
-    //         } else {
-
-    //             headerSite.css({
-    //                 "top" : -110 + "%"
-    //             });
-
-    //         }
-
-    //     } else {
-
-    //         headerSite.css({
-    //             "top" :  0 + "%"
-    //         });
-
-    //     }
-
-    // });
 
     $(".respmenubtn").click(function() {
 
@@ -378,18 +260,30 @@ $(document).ready(function() {
 
     function getHeaderPosition() {
 
+        st = $(window).scrollTop();
+
         firstSectionCorrd = $("#promo").offset().top + $("#promo").height();
 
-        if( $(window).scrollTop() >= firstSectionCorrd ) {
+        if( st >= firstSectionCorrd ) {
 
             headerSite.addClass("fixed");
+
+            if (st > lastScrollTop){
+               headerSite.css({
+                    "top" :  -110 + "%"
+                });
+            } else {
+               headerSite.css({
+                        "top" :  0 + "%"
+                    });
+            }
+            lastScrollTop = st;
 
         } else {
 
             headerSite.removeClass("fixed");
 
         }
-
 
     }
 
